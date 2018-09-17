@@ -30,9 +30,13 @@ var cardSchema = new mongoose.Schema({
     required: true,
     min: 3,
     max: 3
-  }
+  },
   billingAddress: {
     type: String,
+    required: true
+  },
+  userId: {
+    type: Number,
     required: true
   }
 });
@@ -47,7 +51,8 @@ cardSchema.set('toJSON', {
       cardType: card.cardType,
       experation: card.experation,
       securityCode: card.securityCode,
-      billingAddress: card.billingAddress
+      billingAddress: card.billingAddress,
+      userId: card.userId
 
     };
     return returnJson;
