@@ -2,11 +2,21 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 
 var userSchema = new mongoose.Schema({
-  name: {
+  firstName: {
     type: String,
     required: true,
     minlength: 1,
     maxlength: 99
+  },
+  lastName: {
+    type: String,
+    required: true,
+    minlength: 1,
+    maxlength: 99
+  },
+  dob: {
+    type: Date,
+    required: true
   },
   email: { // TODO: Need to add email validation
     type: String,
