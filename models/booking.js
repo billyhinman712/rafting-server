@@ -14,9 +14,9 @@ var bookingSchema = new mongoose.Schema({
   	required: true
   },
   time: {
-    type: number,
+    type: Number,
     required: true
-  }
+  },
   userId: {
   	type: Number,
   	required: true
