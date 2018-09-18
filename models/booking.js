@@ -5,10 +5,6 @@ var bookingSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  cost: {
-    type: Number,
-    required: true
-  }
   date: {
   	type: Date,
   	required: true
